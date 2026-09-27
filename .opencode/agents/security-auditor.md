@@ -1,7 +1,7 @@
 ---
 description: A comprehensive security audit for the Halak project before every Release, walking the security.md §13 checklist. Read-only — never modifies code.
 mode: subagent
-model: groq/openai/gpt-oss-120b
+model: opencode/big-pickle
 temperature: 0.0
 permission:
   edit: deny

@@ -1,7 +1,7 @@
 ---
 description: Writes Backend/Web/Mobile tests according to testing.md, using a real database and no Prisma mocks. May only create or edit files inside test directories. Use when adding an endpoint or a state transition.
 mode: subagent
-model: groq/openai/gpt-oss-120b
+model: opencode/big-pickle
 temperature: 0.3
 permission:
   task: deny

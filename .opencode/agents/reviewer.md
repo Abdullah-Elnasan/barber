@@ -1,7 +1,7 @@
 ---
 description: Reviews a diff or a file in the Halak project before merge, checking it against the documentation. Read-only — never modifies code. Call before every PR.
 mode: subagent
-model: groq/openai/gpt-oss-120b
+model: opencode/big-pickle
 temperature: 0.1
 permission:
   edit: deny

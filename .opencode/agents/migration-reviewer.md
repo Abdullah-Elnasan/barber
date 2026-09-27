@@ -1,7 +1,7 @@
 ---
 description: Reviews a Prisma migration.sql before it is applied, ensuring no manual constraint (Exclusion, CHECK, Trigger, partial index, REVOKE) is dropped and that ACTIVE_STATUSES matches the constraint predicate. Read-only — never modifies code.
 mode: subagent
-model: groq/openai/gpt-oss-120b
+model: opencode/big-pickle
 temperature: 0.0
 permission:
   edit: deny
