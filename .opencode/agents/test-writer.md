@@ -7,8 +7,24 @@ permission:
   task: deny
   webfetch: deny
   websearch: deny
+  skill: deny
+  question: deny
+  doom_loop: deny
+  external_directory: deny
   edit:
     "*": deny
+    "backend/src/**": deny
+    "web/components/**": deny
+    "web/composables/**": deny
+    "web/layouts/**": deny
+    "web/middleware/**": deny
+    "web/pages/**": deny
+    "web/plugins/**": deny
+    "web/utils/**": deny
+    "mobile/lib/**": deny
+    "mobile/ios/**": deny
+    "mobile/android/**": deny
+    "mobile/web/**": deny
     "backend/**/__tests__/**": allow
     "backend/test/**": allow
     "web/tests/**": allow
@@ -18,23 +34,57 @@ permission:
     "*": deny
     "npm test*": allow
     "npm run test*": allow
-    "npm run lint*": allow
-    "npm run typecheck*": allow
+    "npm run lint": allow
+    "npm run typecheck": allow
     "npx jest*": allow
     "npx vitest*": allow
     "npx playwright*": allow
     "flutter test*": allow
     "flutter analyze*": allow
     "npx nuxi analyze*": allow
-    "flutter pub get*": allow
-    "dart run build_runner build*": allow
-    "dart run build_runner*": allow
     "git status*": allow
     "git diff*": allow
     "ls*": allow
-    "cat *": allow
-    "grep *": allow
     "rg *": allow
+    "git diff --output*": deny
+    "git diff --ext-diff*": deny
+    "git log --output*": deny
+    "git show --output*": deny
+    "rg --pre*": deny
+    "rg * --pre *": deny
+    "npm run lint --*": deny
+    "npm run lint --fix*": deny
+    "npm run typecheck --*": deny
+    "npm run lint:fix*": deny
+    "npm run test:fix*": deny
+    "npm run format*": deny
+    "npm run prettier*": deny
+    "npm run gen:api*": deny
+    "npm run prisma*": deny
+    "npm run db:*": deny
+    "npm run seed*": deny
+    "npm ci*": deny
+    "npm install*": deny
+    "npm i *": deny
+    "flutter pub get*": deny
+    "flutter pub upgrade*": deny
+    "dart *": deny
+    "build_runner*": deny
+    "npx prisma*": deny
+    "prisma*": deny
+    "psql*": deny
+    "docker*": deny
+    "git add*": deny
+    "git apply*": deny
+    "git checkout*": deny
+    "git clean*": deny
+    "git commit*": deny
+    "git merge*": deny
+    "git push*": deny
+    "git rebase*": deny
+    "git reset*": deny
+    "git restore*": deny
+    "git stash*": deny
 ---
 
 # Test Writer — Halak
