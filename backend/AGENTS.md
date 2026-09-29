@@ -107,8 +107,8 @@ openapi:export · cli (admin:create | admin:reset-password | tracking:rotate-all
 3. Business-rule logic in pure policies with unit tests.
 4. Audit log for every admin write, and for security events.
 5. Rate limit if it is public or sends SMS.
-6. e2e: success, 401/403/404, and the main 409/422 errors.
-7. `npm run openapi:export` and update [api.md](../docs/api.md).
+6. e2e: success, 401/403/404, the main 409 errors, and `400 VALIDATION_ERROR` (see [Q-14](../docs/SRS.md), provisional).
+7. `npm run openapi:export` and update [api.md](../docs/api.md). Nothing may be generated before [Q-18](../docs/SRS.md) (the `data` envelope) is settled.
 
 ## Common mistakes to avoid
 - Using `@db.Timestamp` instead of `@db.Timestamptz(3)`.

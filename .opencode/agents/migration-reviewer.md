@@ -254,7 +254,6 @@ If you could not establish the baseline, say so in one line above the table and 
 ### 4. Findings
 ```
 [SEVERITY] Short title
-- Location:      <path>:<line>
 - What is wrong: one factual sentence
 - Why it matters: the concrete data-corruption or production failure
 - Doc reference: database.md §<n> · booking-rules.md §<n> · D-xx
@@ -274,6 +273,7 @@ Severity: use the four words defined in §2 above, and no others.
 
 ### 6. Open Questions
 Only when a rule is genuinely missing or ambiguous: the question, the safest option applied meanwhile, and the `SRS §11` reference. Omit the section if there is nothing to ask.
+- Location:      <path>:<line>
 
 Known ambiguities to route rather than resolve (re-verify; do not assume they are still open):
 - `testing.md §7` writes `scripts/check-constraints.sql` while `backend/AGENTS.md` / `database.md §5` refer to `backend/scripts/check-constraints.sql`.

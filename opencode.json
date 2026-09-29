@@ -1,4 +1,38 @@
 {
   "$schema": "https://opencode.ai/config.json",
-  "model": "opencode/big-pickle"
+  "model": "opencode/big-pickle",
+  "mcp": {
+    "github": {
+      "type": "remote",
+      "url": "https://api.githubcopilot.com/mcp/readonly",
+      "oauth": {}
+    },
+    "PostgreSQL": {
+      "type": "local",
+      "command": [
+        "npx",
+        "-y",
+        "@microsoft/postgres-mcp",
+        "run\\"
+      ]
+    },
+    "Playwright": {
+      "type": "local",
+      "command": [
+        "npx",
+        "@playwright/mcp@latest"
+      ]
+    },
+    "Redis": {
+      "type": "local",
+      "command": [
+        "uvx",
+        "--from",
+        "redis-mcp-server@latest",
+        "redis-mcp-server",
+        "--url",
+        "redis://localhost:6379/0"
+      ]
+    }
+  }
 }
